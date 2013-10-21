@@ -1,0 +1,103 @@
+<html ng-app>
+    <head>
+		<title>Phonegap-pageslider-handlebars-websql-app</title>
+		
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap/3.0/css/bootstrap.min.css" /> 
+		<link rel="stylesheet" type="text/css" href="css/pageslider.css">                     
+        <link rel="stylesheet" type="text/css" href="css/index.css" />      
+
+    </head>
+    <body>
+		
+		<div class="app-title">Application title</div>		
+		
+		<div id="content_wrapper">
+				   
+			<script id="home" type="text/x-handlebars-template">
+				<div id="home_wrapper">
+					<div class="site_title">        						      
+						<h4><span class="glyphicon glyphicon-home"></span> Home</h4>									 
+					</div>
+					<div class="wrap">						
+						<h2>{{title}}</h2>
+						<p><b>Phonegap:</b> {{phonegap}}</p>
+						<p><b>Pageslider:</b> {{pageslider}}</p>
+						<p><b>Handlebars:</b> {{handlebars}}</p>
+						<p><b>WebSQL:</b> {{websql}}</p>
+						<h4>{{author}}</h4>
+					</div>
+				</div>
+			</script>
+			
+			<script id="books" type="text/x-handlebars-template">
+				<div id="books_wrapper">
+					<div class="site_title">        	
+						<h4><span class="glyphicon glyphicon-book"></span> Books</h4>									 
+					</div>
+					<div class="wrap">
+						{{#each books}}
+							<div class="row">	
+								<div class="col-xs-12">
+									<h3>{{title}}</h3>
+								</div>
+							</div>	
+							<div class="row">	
+								<div class="col-xs-2">
+									<img src="data:image/jpeg;base64,{{image}}" />
+								</div>
+								<div class="col-xs-10">
+									{{description}}
+								</div>
+							</div>	
+						{{/each}}
+					</div>
+				</div>
+			</script>
+			
+			<script id="storage" type="text/x-handlebars-template">
+				<div id="storage_wrapper">
+					<div class="site_title">        	
+						<h4><span class="glyphicon glyphicon-cloud"></span> Storage</h4>									 
+					</div>
+					<div class="wrap">			
+						<div class="storage_content">
+							Your name:<br>
+							<input class="form-control" type="text" id="yourname" name="yourname" />						
+							<input type="button" class="btn storage-button pull-left" value="Memorize" onclick="memorize(document.getElementById('yourname').value)" />
+							<input style="display:none;" class="btn storage-button pull-right" id="delete_button" type="button" value="Delete from storage" onclick="deleteFromDb()" />												
+							<div class="result"></div>
+						</div>
+					</div>
+				</div>
+			</script>
+
+		</div>		
+
+		<div class="footer">
+			<div class="app-nav row">
+				<div class="footer_item  text-center first">
+					<a href="#" id="footer_btn_home" class="btn btn-lg btn-block active"><span class="glyphicon glyphicon-home"></span><br>Home</a>
+				</div>									
+				<div class="footer_item text-center">		          
+					<a href="#books" id="footer_btn_books" class="btn btn-lg btn-block"><span class="glyphicon glyphicon-book"></span><br>Books</a>
+				</div>
+				<div class="footer_item  text-center">
+					<a href="#storage" id="footer_btn_storage" class="btn btn-lg btn-block"><span class="glyphicon glyphicon-cloud"></span><br>Storage</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="lib/jquery/1.10.2/jquery.min.js"></script>        			
+		<script src="lib/handlebars/1.0/handlebars.js"></script>     
+		<script src="lib/pageslider/pageslider.js"></script>	
+        <script type="text/javascript" src="lib/bootstrap/3.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/application.js"></script>        
+		<script>
+			initialize();
+		</script>
+    </body>
+</html>

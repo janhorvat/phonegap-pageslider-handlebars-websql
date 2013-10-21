@@ -1,0 +1,85 @@
+a {
+	color: black;
+}
+
+a:hover {
+	color: #2e73c9;
+}
+
+.app-title {
+	text-align: center;
+	background-color: #eac400;
+	color: #fff;
+	font-size: 32px;
+	font-weight: bold;
+	padding: 5px 0;
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+}
+
+.site_title {
+	margin-top: 55px;
+	background-color: #161512;
+	color: #fff;
+	padding: 5px;
+}
+
+.wrap {
+	margin-top: 0px;
+	padding: 0px 5px 60px 5px;
+}
+
+.storage_content {
+	padding-top: 10px;
+}
+
+.storage-button {
+	margin-top: 5px;
+}
+
+.result {
+	padding-top: 60px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.footer {
+	height: 60px;
+	position: fixed !important;
+	width: 100%;
+	bottom: 0px !important;
+	left: 0px !important;
+	background-color: #ffffff;
+	border-top: 1px solid #ccc;
+	position:fixed;
+}
+
+.footer_item {
+	width: 33.33%;
+	float: left;
+}
+
+.footer_item a{
+	border-radius: 0;
+	border-left: 1px solid #ccc;
+}
+
+.footer_item.first a{ 
+	border-left:none;	 
+}
+
+.btn {
+	background-color: #161512;
+	color: #fff;
+}
+
+.btn.active {
+	background-color: #eac400;
+	color: #161512;
+}
+
+.btn:hover {
+	background-color: #eac400;
+	color: #161512;
+}
